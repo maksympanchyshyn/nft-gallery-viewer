@@ -1,4 +1,5 @@
 import { ethers } from 'ethers';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import { Balance, ConnectBtn, Container, Logo, AccountContainer } from './styled';
@@ -35,7 +36,9 @@ const Header = () => {
 
   return (
     <Container>
-      <Logo>Logo placeholder</Logo>
+      <Logo>
+        <Image src="/header-logo.png" alt="header-logo" layout="fill" />
+      </Logo>
       <AccountContainer>
         {isConnected ? (
           <Balance>

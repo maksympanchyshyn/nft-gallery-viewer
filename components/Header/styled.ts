@@ -6,11 +6,18 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 export const Logo = styled.div`
   color: #fff;
   font-size: 24px;
+  width: 256px;
+  height: 48px;
+  position: relative;
 `;
 
 export const AccountContainer = styled.div`
