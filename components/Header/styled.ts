@@ -2,20 +2,18 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 72px;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 64px;
+  padding: 0 4rem;
   position: fixed;
   top: 0;
   left: 0;
 `;
 
 export const Logo = styled.div`
-  color: #fff;
-  font-size: 24px;
-  width: 256px;
-  height: 48px;
+  width: 16rem;
+  height: 3rem;
   position: relative;
 `;
