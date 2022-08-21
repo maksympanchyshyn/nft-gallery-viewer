@@ -6,15 +6,20 @@ export const AccountContainer = styled.div`
   align-items: center;
 `;
 
-export const Balance = styled.div`
+export const Btn = styled.button`
+  cursor: pointer;
   padding: 8px 12px;
-  background: #171a26;
-  color: #fff;
   border: none;
   border-radius: 8px;
   font-size: 16px;
 `;
 
-export const ConnectBtn = styled(Balance)`
-  cursor: pointer;
+export const AccountBtn = styled(Btn)`
+  background: #171a26;
+  color: #fff;
+`;
+
+export const ConnectBtn = styled(Btn)`
+  background: #171a26;
+  color: #fff;
 `;
