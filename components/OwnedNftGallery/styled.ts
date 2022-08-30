@@ -19,15 +19,3 @@ export const CardsRow = styled.div`
   align-content: center;
   margin: 0.5rem 0;
 `;
-
-export const NFTCard = styled.div`
-  cursor: pointer;
-  border-radius: 8px;
-  height: 22.5rem;
-  width: 20rem;
-  margin: 1rem;
-  text-align: center;
-  line-height: 22rem;
-  font-size: 1rem;
-  border: 1px solid #fff;
-`;

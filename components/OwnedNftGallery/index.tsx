@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Alchemy, Network } from 'alchemy-sdk';
+import { Alchemy, Network, OwnedNft } from 'alchemy-sdk';
 
+import NFTCard from '../NftCard';
+import { CardsRow, Container } from './styled';
 import { LOCAL_STORAGE_KEYS, ALCHEMY_API_KEY } from '../../constants';
-import { CardsRow, Container, NFTCard } from './styled';
 
 const config = {
   apiKey: ALCHEMY_API_KEY,
@@ -12,7 +13,7 @@ const config = {
 const alchemy = new Alchemy(config);
 
 const OwnedNftGallery = () => {
-  const [ownedNfts, setOwnedNfts] = useState<any[]>([]);
+  const [ownedNfts, setOwnedNfts] = useState<OwnedNft[]>([]);
 
   const getOwnedNfts = async (address: string) => {
     const nfts = await alchemy.nft.getNftsForOwner(address);
@@ -30,7 +31,7 @@ const OwnedNftGallery = () => {
     <Container>
       <CardsRow>
         {ownedNfts.map((item) => (
-          <NFTCard key={item.tokenId}>{item.title}</NFTCard>
+          <NFTCard key={item.title} item={item} />
         ))}
       </CardsRow>
     </Container>
